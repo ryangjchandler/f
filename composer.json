@@ -1,0 +1,40 @@
+{
+    "name": "ryangjchandler/skeleton-php",
+    "description": "A template repository for PHP packages.",
+    "license": "MIT",
+    "readme": "https://github.com/ryangjchandler/skeleton-php/README.md",
+    "authors": [
+        {
+            "name": "Ryan Chandler",
+            "email": "support@ryangjchandler.co.uk"
+        }
+    ],
+    "homepage": "https://github.com/ryangjchandler/skeleton-php",
+    "autoload": {
+        "psr-4": {
+            "RyanChandler\\Skeleton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "pestphp/pest": "^3.7",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/extension-installer": "^1.4.3"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "test": "@php vendor/bin/pest",
+        "lint": "vendor/bin/phpstan"
+    }
+}
