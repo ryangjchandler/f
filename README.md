@@ -20,12 +20,17 @@ Once installed, the package will provide a global `f()` function that you can st
 f('Hello, {}', 'Ryan');
 ```
 
-> [!NOTE]
-> If for whatever reason you already have an `f()` function defined in the global namespace, this package won't attempt to register another one.
+If you've already got an `f()` function registered in the global namespace, or despise global helper functions, you can use the `RyanChandler\F\F` class instead.
 
-The `{}` syntax you see above is known as a placeholder. This is where the arguments you pass to `f()` will be injected into the string.
+```php
+use RyanChandler\F\F;
+
+F::format('Hello, {}', 'Ryan');
+```
 
 ### Placeholder Syntax
+
+The `{}` syntax you see above is known as a placeholder. This is where the arguments you pass to `f()` will be injected into the string.
 
 | Placeholder | Description | Example | Result |
 | - | - | - | - |

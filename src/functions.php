@@ -2,7 +2,7 @@
 
 // If you're already defining a function called `f`, you're a real one.
 
-use RyanChandler\F\Processor;
+use RyanChandler\F\F;
 
 if (function_exists('f')) {
     return;
@@ -15,5 +15,5 @@ if (function_exists('f')) {
  */
 function f(string $format, mixed ...$args): string
 {
-    return (new Processor($format, ...$args))->__toString();
+    return F::format($format, $args);
 }
