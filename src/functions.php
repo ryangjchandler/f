@@ -15,5 +15,5 @@ if (function_exists('f')) {
  */
 function f(string $format, mixed ...$args): string
 {
-    return F::format($format, $args);
+    return F::format($format, ...$args);
 }
