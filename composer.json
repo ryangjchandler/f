@@ -1,8 +1,8 @@
 {
-    "name": "ryangjchandler/skeleton-php",
-    "description": "A template repository for PHP packages.",
+    "name": "ryangjchandler/f",
+    "description": "Nicer string formatting for PHP, inspired by Rust, Python and others.",
     "license": "MIT",
-    "readme": "https://github.com/ryangjchandler/skeleton-php/README.md",
+    "readme": "https://github.com/ryangjchandler/f/README.md",
     "authors": [
         {
             "name": "Ryan Chandler",
@@ -12,8 +12,11 @@
     "homepage": "https://github.com/ryangjchandler/skeleton-php",
     "autoload": {
         "psr-4": {
-            "RyanChandler\\Skeleton\\": "src"
-        }
+            "RyanChandler\\F\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -25,7 +28,8 @@
     "require-dev": {
         "pestphp/pest": "^3.7",
         "phpstan/phpstan": "^2.0",
-        "phpstan/extension-installer": "^1.4.3"
+        "phpstan/extension-installer": "^1.4.3",
+        "symfony/var-dumper": "^7.2"
     },
     "config": {
         "allow-plugins": {
@@ -35,6 +39,10 @@
     },
     "scripts": {
         "test": "@php vendor/bin/pest",
-        "lint": "vendor/bin/phpstan"
+        "lint": "vendor/bin/phpstan --memory-limit=-1",
+        "fmt": "vendor/bin/pint"
+    },
+    "require": {
+        "laravel/pint": "^1.21"
     }
 }

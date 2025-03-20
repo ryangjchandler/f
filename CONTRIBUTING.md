@@ -1,6 +1,6 @@
 # Contributing
 
-All contributions to Skeleton are welcome and greatly appreciated, regardless of their size or set of changes.
+All contributions to `f` are welcome and greatly appreciated, regardless of their size or set of changes.
 
 To make sure your pull request is reviewed and treated fairly, please follow the rules below:
 * Keep your contribution small and self-contained. Don't make large changes to multiple parts of the project at the same time.
